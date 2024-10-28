@@ -25,6 +25,13 @@ erpnext.accounts.PurchaseInvoice = class PurchaseInvoice extends erpnext.buying.
 				}
 			};
 		});
+
+		this.frm.set_query("expense_account", "items", function () {
+			return {
+				query: "erpnext.controllers.queries.get_expense_account",
+				filters: { company: doc.company },
+			};
+		});
 	}
 
 	onload() {
@@ -468,13 +475,6 @@ cur_frm.fields_dict['select_print_heading'].get_query = function(doc, cdt, cdn) 
 		]
 	}
 }
-
-cur_frm.set_query("expense_account", "items", function(doc) {
-	return {
-		query: "erpnext.controllers.queries.get_expense_account",
-		filters: {'company': doc.company }
-	}
-});
 
 cur_frm.set_query("wip_composite_asset", "items", function() {
 	return {
