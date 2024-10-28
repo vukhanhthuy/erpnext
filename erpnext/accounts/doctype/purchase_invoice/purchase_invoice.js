@@ -476,18 +476,7 @@ cur_frm.fields_dict['select_print_heading'].get_query = function(doc, cdt, cdn) 
 	}
 }
 
-<<<<<<< HEAD
-cur_frm.set_query("expense_account", "items", function(doc) {
-	return {
-		query: "erpnext.controllers.queries.get_expense_account",
-		filters: {'company': doc.company }
-	}
-});
-
 cur_frm.set_query("wip_composite_asset", "items", function() {
-=======
-cur_frm.set_query("wip_composite_asset", "items", function () {
->>>>>>> a9ac0cc223 (refactor: query for expense_account moved to setup hook in purchase invoice)
 	return {
 		filters: {'is_composite_asset': 1, 'docstatus': 0 }
 	}
