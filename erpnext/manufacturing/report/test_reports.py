@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import unittest
 
 import frappe
@@ -62,3 +63,5 @@ class TestManufacturingReports(unittest.TestCase):
 					default_filters=DEFAULT_FILTERS,
 					optional_filters=OPTIONAL_FILTERS if filter.get("_optional") else None,
 				)
+=======
+>>>>>>> 966e8fa85e (fix: rounding issue of required qty in subcontracting order (#43810))
